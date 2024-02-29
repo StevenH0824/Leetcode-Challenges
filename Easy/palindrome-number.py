@@ -13,7 +13,7 @@ result1 = True
 input2 = -123
 result2 = False
 
-input3 = -10
+input3 = 10
 result3 = False
 
 def display(func, result):
@@ -30,14 +30,12 @@ def isPalindrome(x: int) -> bool:
     elif (x == 0):
         return True
     else:
-        while(num2 > 0):
-            num2 = int(num2 / x)
-            if (num2 == 1):
-                return True
-            else:
-                return False
-    #print(x,num2)
-    return True
+        reversed_num = 0
+        while num2 > 0:
+            digit = num2 % 10
+            reversed_num = reversed_num * 10 + digit
+            num2 = num2 // 10
+    return x == reversed_num
 
 
 
