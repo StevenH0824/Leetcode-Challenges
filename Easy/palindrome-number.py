@@ -2,6 +2,7 @@
 # Given an integer x, return true if x is a palindrome, and false otherwise.
 
 """
+# solved by converting to a string
 def isPalindrome(x: int) -> bool:
     snum = str(x)
     return snum == snum[::-1]
@@ -23,7 +24,6 @@ def display(func, result):
 
 def isPalindrome(x: int) -> bool:
     # without using a string
-
     num2 = x
     if (x < 0):
         return False
