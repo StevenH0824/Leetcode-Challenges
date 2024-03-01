@@ -9,19 +9,12 @@
 def display(func, result):
     print(func == result)
 
-
 def runningSum(nums: list[int]) -> list[int]:
+    runningSum = 0
     newlist = []
-    for number in range (len(nums)):
-        if number == 0:
-            newlist.append(nums[number])
-        else:
-            index = number
-            total = nums[number]
-            while index > 0:
-                total += nums[number - index]
-                index -= 1
-            newlist.append(total)
+    for number in nums:
+        runningSum += number
+        newlist.append(runningSum)
     return newlist
 
 input1 = [1,2,3,4]          # [1, 1+2, 1+2+3, 1+2+3+4]
@@ -53,4 +46,20 @@ for number in range (len(nums)):
             total.append(nums[number] + nums[number-1] + nums[number-2])
         if (number == 3):
             total.append(nums[number] + nums[number-1] + nums[number-2] + nums[number-3])
+
+            
+Second Solution, Finding ways I can make it more efficient. 
+def runningSum(nums: list[int]) -> list[int]:
+    newlist = []
+    for number in range (len(nums)):
+        if number == 0:
+            newlist.append(nums[number])
+        else:
+            index = number
+            total = nums[number]
+            while index > 0:
+                total += nums[number - index]
+                index -= 1
+            newlist.append(total)
+    return newlist
 """
