@@ -27,3 +27,10 @@ def defangIPaddr(address: str) -> str:
 display(defangIPaddr(address1),output1)
 display(defangIPaddr(address2),output2)
         
+"""
+I really liked this solution. I forgot to use methods in python but this is another easier
+method of solving the problem. 
+class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        return address.replace('.', '[.]')
+"""
