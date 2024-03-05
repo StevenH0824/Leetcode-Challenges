@@ -31,3 +31,22 @@ display(interpret(command1),output1)
 display(interpret(command2),output2)
 display(interpret(command3),output3)
 
+
+
+"""
+I really liked this solution since I was on this path originally before thinking of the
+replace function in python. One thing that would have taken time would have been the 
+conditional statement in order to get the right string. 
+class Solution:
+    def interpret(self, command: str) -> str:
+        re=""
+        for i in range(len(command)):
+            if command[i]=='(' and command[i+1]==')':
+                re+='o'
+            elif command[i]=='(' and command[i+1]=='a':
+                re+='al'
+            elif command[i]=='G':
+                re+=command[i]
+        return re 
+
+"""
